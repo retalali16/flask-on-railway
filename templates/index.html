@@ -29,6 +29,19 @@
       overflow: hidden;
     }
 
+    .background-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://www.edarabia.com/ar/wp-content/uploads/2020/03/ahmed-zewail-childhood-upbringing-knowledge-accomplishments.jpg');
+      background-size: cover;
+      background-position: center center;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
     .chatbox {
       animation: fadeIn 1s ease-out;
       position: relative;
@@ -116,6 +129,7 @@
   </style>
 </head>
 <body class="bg-gray-100">
+  <div class="background-logo"></div>
   <div id="root"></div>
 
   <script type="text/babel">
