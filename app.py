@@ -9,7 +9,7 @@ import os
 app = Flask(__name__, static_folder='static', template_folder='templates')
 CORS(app)
 
-# Load BERT tokenizer and model
+
 try:
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     model = BertModel.from_pretrained('bert-base-uncased')
@@ -116,5 +116,5 @@ def serve_frontend():
 def health():
     return jsonify({"status": "healthy"}), 200
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+if __name__ == '__main__':
+    app.run(debug=True)
